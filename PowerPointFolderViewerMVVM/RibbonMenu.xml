@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+	<ribbon>
+		<tabs>
+			<tab id="CustomTab" label="Folder Tree View">
+				<group id="FolderGroup" label="Explorer">
+					<button id="btnOpenExplorer" label="Open Folder Tree"
+							onAction="OnExplorerClick" size="large" imageMso="Folder" />
+					<!--<button id="btnTest" label="Open Test Tree"
+							onAction="OnTestClick" size="large" imageMso="File" />-->
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
