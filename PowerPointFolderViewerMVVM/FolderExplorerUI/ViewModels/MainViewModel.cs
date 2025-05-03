@@ -20,8 +20,14 @@ namespace PowerPointFolderViewerMVVM.FolderExplorerUI.ViewModels
         {
             Nodes = new ObservableCollection<FolderItem>();
             var basePath = ConfigurationSettings.AppSettings["BaseFolderPath"];
+            FolderItem obj = new FolderItem(basePath);
+            
+            //var basePath = ConfigurationSettings.AppSettings["BaseFolderPath"];
             foreach (var item in _service.GetSubFolders(basePath))
-                Nodes.Add(item);
+            {
+                obj.SubFolders.Add(item);
+            }
+            Nodes.Add(obj);
 
         }
     }
